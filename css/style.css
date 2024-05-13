@@ -166,6 +166,57 @@ main section .x_line {
     transform: rotateZ(0deg);
 }
 
+/* BLOG - START */
+#blog .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid_gap);
+    & article:last-child {
+        grid-column: 1/3;
+    }
+}
+
+#blog article {
+    padding: 1.25rem 0.375rem;
+    
+    & h4 {
+        color: var(--main_color);
+        font-size: 1.07rem;
+        margin: var(--grid_gap) 0;
+    }
+    & h3 {
+        font-weight: 700;
+        font-size: 1.15rem;
+    }
+    & > p {
+        margin-bottom: var(--grid_gap);
+        color: #777;
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+    & figure {
+        position: relative;
+        margin-bottom: 1.25rem;
+    }
+}
+
+#blog .overlay {
+    position: absolute;
+    top: 0;
+
+    background-color: #fa573abb;
+    width: fit-content;
+
+    text-align: center;
+    & > p {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: white;
+        padding: 0.4375rem 0.875rem;
+    }
+}
+
+
 /* MEDIA QUERIES - START */
 @media (width >= 37.5rem) {
     #our_services .grid {
