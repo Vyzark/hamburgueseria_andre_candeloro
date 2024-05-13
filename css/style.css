@@ -1,47 +1,39 @@
 @import url(meyer_reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
+@import url(layout.css);
 /* ######################### */
 
-/* GENERAL LAYOUT - START */
-:root {
-    --main_font: 'Montserrat', sans-serif;
-    --secondary_font: "Handlee", cursive;
-    --main_color: #fa573a;
-    --bg_color: #21242e;
-    --font_size: 1rem;
-    --max_width: 68.75rem;
-    --grid_gap: 1rem;
+/* HEADER - START */
+header .header-top {
+    background-color: var(--bg_color);
+    padding: 1.25rem 0;
+}
+header .header-top .container {
+    display: flex;
+    justify-content: space-around;
+    & span {
+        display: none;
+    }
+    & i {
+        font-size: 140%;
+        color: var(--main_color);
+    }
 }
 
-html {
-    scroll-behavior: smooth; 
-    /* Creates a smoother scroll transition for "long" scrolls as a scroll animation */
+/* HEADER - FINISH */
+
+/* MEDIA QUERIES - START */
+@media (width >= 768px) {
+    header .header-top .container {
+        justify-content: space-between;
+        & span {
+            display: inline;
+        }
+        & a {
+            text-decoration: none;
+            color: white;
+            font-size: 110%;
+        }
+    }
 }
-
-body {
-    font-family: var(--main_font);
-    font-size: var(--font_size);
-}
-
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.container {
-    max-width: var(--max_width);
-    margin: 0 auto;
-    /*TODO: Missing Padding settings */
-    /* padding: ; */
-}
-
-a {
-    text-decoration: none;
-    /* color: white; */
-}
-
-
-
-/* GENERAL LAYOUT - FINISH */
