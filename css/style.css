@@ -25,7 +25,7 @@ header .header-top .container {
 header nav .container {
     display: flex;
     flex-wrap: wrap;
-    padding: 1.25rem 0;
+    padding-top: 1.25rem;
 }
 
 header nav figure {
@@ -175,6 +175,7 @@ footer {
 
     header nav .container {
         flex-wrap: nowrap;
+        padding: 1.25rem 0;
     }
 
     header .menu {
