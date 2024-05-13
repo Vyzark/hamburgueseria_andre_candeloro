@@ -1,7 +1,7 @@
 @import url(meyer_reset.css);
 /* @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 @import url(layout.css);
 /* ######################### */
 
@@ -66,6 +66,132 @@ header .menu {
 }
 /* HEADER - FINISH */
 
+/* HERO - START */
+
+.hero {
+    background-image: url(../images/fondo.jpg);
+    background-color: #aaa;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    padding: 8.125rem 0.625rem;
+    & h1 {
+        font-family: var(--title_font);
+        font-size: 2.25rem;
+        color: white;
+    }
+    & h2 {
+        color: var(--main_color);
+        font-size: 1.25rem;
+        margin: var(--grid_gap) 0;
+    }
+    & p {
+        color: white;
+    }
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--main_color);
+    border: var(--main_color) solid 1px;
+    padding: 1.15rem;
+    margin: var(--grid_gap) 0;
+    text-decoration: none;
+    color: white;
+    &:hover {
+        background-color: transparent;
+        color: var(--main_color);
+        & i {
+            transform: translateX(5px);
+            transition: transform 0.5s;
+            /* Every possible transition can be specified individually by adding it's attribute name before the transition time */
+        }
+    }
+}
+
+.hero .social {
+    display: flex;
+    justify-content: space-between;
+    width: 10.5rem;
+    & a {
+        font-size: 2em;
+        color: white;
+    }
+}
+
+/* HERO - FINISH */
+
+/* OUR SERVICES SECTION - START */
+main {
+    margin-bottom: 6.25rem;
+}
+
+main section {
+    padding: 4rem 0;
+    & h2 {
+        font-family: var(--title_font);
+        font-size: 2rem;
+        text-align: center;
+        & span {
+            color: var(--main_color);
+        }
+    }
+}
+
+main section .x_line {
+    position: relative;
+    width: 6.25rem;
+    margin: 0 auto 1.25rem auto;
+
+    color: var(--main_color);
+    font-weight: 900;
+    text-align: center;
+    & hr {
+        position: absolute;
+        width: 100%;
+        top: -0.125rem;
+
+        border-color: var(--main_color);
+    }
+}
+
+#our_services .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid_gap);
+}
+#our_services article {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #aaa;
+    & i {
+        color: var(--main_color);
+    }
+    & > div i {
+        font-size: 1.5rem;
+        border: 1px solid var(--main_color);
+        padding: 0.8rem;
+    }
+    & h3 {
+        margin: var(--grid_gap) 0;
+        font-weight: 700;
+        font-size: 1.15rem;
+    }
+    & p {
+        margin-bottom: var(--grid_gap);
+        color: #aaa;
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+}
+
+.link {
+    color: var(--main_color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* OUR SERVICES SECTION - FINISH */
+
 /* FOOTER - START */
 footer {
     background-color: var(--bg_color);
@@ -95,62 +221,21 @@ footer {
 
 /* FOOTER - FINISH */
 
-/* HERO - START */
-
-.hero {
-    background-image: url(../images/fondo.jpg);
-    background-color: #aaa;
-    background-size: cover;
-    background-position: center center;
-    background-blend-mode: multiply;
-    padding: 8.125rem 0.625rem;
-    & h1 {
-        font-family: var(--secondary_font);
-        font-size: 2.25rem;
-        color: white;
-    }
-    & h2 {
-        color: var(--main_color);
-        font-size: 1.25rem;
-        margin: var(--grid_gap) 0;
-    }
-    & p {
-        color: white;
-    }
-}
-
-.button {
-    display: inline-block;
-    background-color: var(--main_color);
-    border: var(--main_color) solid 1px;
-    padding: 1.15rem;
-    margin: var(--grid_gap) 0;
-    text-decoration: none;
-    color: white;
-    &:hover {
-        background-color: transparent;
-        color: var(--main_color);
-        & i{
-            transform: translateX(5px);
-            transition: transform 0.5s;
-            /* Every possible transition can be specified individually by adding it's attribute name before the transition time */
+/* MEDIA QUERIES - START */
+@media (width >= 37.5rem) {
+    #our_services .grid {
+        grid-template-columns: repeat(2, 1fr);
+        & article {
+            padding: 1.25rem;
+            border-bottom: 0;
+            border-left: 1px solid #aaa;
+            &:last-child {
+                grid-column: 1/3;
+            }
         }
     }
 }
 
-.hero .social{ 
-    display: flex;
-    justify-content: space-between;
-    width: 10.5rem;
-    & a{
-        font-size: 2em;
-        color: white;
-    }
-}
-
-/* HERO - FINISH */
-
-/* MEDIA QUERIES - START */
 @media (width >= 48rem) {
     header .header-top .container {
         justify-content: space-between;
@@ -165,6 +250,12 @@ footer {
     }
     footer {
         text-align: left;
+    }
+    #our_services .grid {
+        grid-template-columns: repeat(3, 1fr);
+        & article:last-child {
+            grid-column: 3/4;
+        }
     }
 }
 
