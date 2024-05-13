@@ -7,7 +7,6 @@
 /* ######################### */
 
 /* HERO - START */
-
 .hero {
     background-image: url(../images/fondo.jpg);
     background-color: #aaa;
@@ -129,7 +128,6 @@ main section .x_line {
 }
 
 /* ABOUT US SECTION - START */
-
 #about_us .flex {
     display: flex;
     flex-direction: column;
@@ -164,11 +162,9 @@ main section .x_line {
     }
 }
 
-#about_us figure:hover :is(.frame, img){
+#about_us figure:hover :is(.frame, img) {
     transform: rotateZ(0deg);
 }
-
-
 
 /* MEDIA QUERIES - START */
 @media (width >= 37.5rem) {
