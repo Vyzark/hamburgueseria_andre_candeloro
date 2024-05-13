@@ -63,8 +63,36 @@ header .menu {
         color: var(--main_color);
     }
 }
-
 /* HEADER - FINISH */
+
+/* FOOTER - START */
+footer {
+    background-color: var(--bg_color);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    text-align: center;
+    color: white;
+    padding: 1.25rem 0;
+    & a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: var(--main_color);
+        }
+    }
+}
+.arrow-up a {
+    position: fixed;
+    bottom: 4rem;
+    right: 0.625rem;
+
+    font-size: 300%;
+    color: var(--main_color);
+}
+
+/* FOOTER - FINISH */
 
 /* MEDIA QUERIES - START */
 @media (width >= 48rem) {
@@ -78,6 +106,9 @@ header .menu {
             color: white;
             font-size: 110%;
         }
+    }
+    footer {
+        text-align: left;
     }
 }
 
