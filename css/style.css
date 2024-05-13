@@ -1,5 +1,6 @@
 @import url(meyer_reset.css);
-@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css);
 @import url(layout.css);
 /* ######################### */
@@ -93,6 +94,61 @@ footer {
 }
 
 /* FOOTER - FINISH */
+
+/* HERO - START */
+
+.hero {
+    background-image: url(../images/fondo.jpg);
+    background-color: #aaa;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    padding: 8.125rem 0.625rem;
+    & h1 {
+        font-family: var(--secondary_font);
+        font-size: 2.25rem;
+        color: white;
+    }
+    & h2 {
+        color: var(--main_color);
+        font-size: 1.25rem;
+        margin: var(--grid_gap) 0;
+    }
+    & p {
+        color: white;
+    }
+}
+
+.button {
+    display: inline-block;
+    background-color: var(--main_color);
+    border: var(--main_color) solid 1px;
+    padding: 1.15rem;
+    margin: var(--grid_gap) 0;
+    text-decoration: none;
+    color: white;
+    &:hover {
+        background-color: transparent;
+        color: var(--main_color);
+        & i{
+            transform: translateX(5px);
+            transition: transform 0.5s;
+            /* Every possible transition can be specified individually by adding it's attribute name before the transition time */
+        }
+    }
+}
+
+.hero .social{ 
+    display: flex;
+    justify-content: space-between;
+    width: 10.5rem;
+    & a{
+        font-size: 2em;
+        color: white;
+    }
+}
+
+/* HERO - FINISH */
 
 /* MEDIA QUERIES - START */
 @media (width >= 48rem) {
