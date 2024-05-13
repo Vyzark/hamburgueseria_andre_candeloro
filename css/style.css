@@ -178,7 +178,7 @@ main section .x_line {
     }
     & p {
         margin-bottom: var(--grid_gap);
-        color: #aaa;
+        color: #777;
         font-size: 0.95rem;
         line-height: 1.3;
     }
@@ -192,13 +192,47 @@ main section .x_line {
 
 /* OUR SERVICES SECTION - FINISH */
 
+/* ABOUT US SECTION - START */
 
-/* OUR SERVICES SECTION - START */
+#about_us .flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid_gap);
+}
+#about_us h3 {
+    font-weight: 700;
+    font-size: 1.15rem;
+}
 
+#about_us h4 {
+    color: var(--main_color);
+    font-size: 1.07rem;
+    margin: var(--grid_gap) 0;
+}
 
+#about_us p {
+    color: #777;
+    line-height: 1.3rem;
+}
 
-/* OUR SERVICES SECTION - FINISH */
+#about_us .frame {
+    width: 90%;
+    margin: 0 auto;
+    border: 3px solid var(--main_color);
 
+    transform: rotateZ(10deg);
+    transition: 1s;
+    & img {
+        transform: rotateZ(-10deg);
+        transition: 1s;
+    }
+}
+
+#about_us figure:hover :is(.frame, img){
+    transform: rotateZ(0deg);
+}
+
+/* ABOUT US SECTION - FINISH */
 
 /* FOOTER - START */
 footer {
@@ -241,6 +275,9 @@ footer {
                 grid-column: 1/3;
             }
         }
+    }
+    #about_us .flex {
+        flex-direction: row;
     }
 }
 
