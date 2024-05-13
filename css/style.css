@@ -1,70 +1,10 @@
 @import url(meyer_reset.css);
-/* @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,400..700;1,400..700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 @import url(layout.css);
+@import url(header_footer.css);
+@import url(main.css);
 /* ######################### */
-
-/* HEADER - START */
-header .header-top {
-    background-color: var(--bg_color);
-    padding: 1.25rem 0;
-}
-header .header-top .container {
-    display: flex;
-    justify-content: space-around;
-    & span {
-        display: none;
-    }
-    & i {
-        font-size: 140%;
-        color: var(--main_color);
-    }
-}
-
-header nav .container {
-    display: flex;
-    flex-wrap: wrap;
-    padding-top: 1.25rem;
-}
-
-header nav figure {
-    width: calc(100% - 1.875rem);
-    & a {
-        display: block;
-        max-width: 6.25rem;
-    }
-}
-
-header nav .animated-menu-icon {
-    width: 1.875rem;
-    cursor: pointer;
-    & div {
-        border-top: 0.125rem solid #aaa;
-        margin-bottom: 0.625rem;
-    }
-}
-
-header .menu {
-    width: 100%;
-    & a {
-        display: block;
-        width: 100%;
-        padding: 1.25rem;
-
-        text-decoration: none;
-        text-align: center;
-        border-bottom: 0.0625rem solid #aaa;
-        color: #aaa;
-    }
-    & li:last-child a {
-        border-bottom: 0;
-    }
-    & a.active {
-        color: var(--main_color);
-    }
-}
-/* HEADER - FINISH */
 
 /* HERO - START */
 
@@ -118,8 +58,6 @@ header .menu {
         color: white;
     }
 }
-
-/* HERO - FINISH */
 
 /* OUR SERVICES SECTION - START */
 main {
@@ -190,8 +128,6 @@ main section .x_line {
     font-weight: 700;
 }
 
-/* OUR SERVICES SECTION - FINISH */
-
 /* ABOUT US SECTION - START */
 
 #about_us .flex {
@@ -232,36 +168,7 @@ main section .x_line {
     transform: rotateZ(0deg);
 }
 
-/* ABOUT US SECTION - FINISH */
 
-/* FOOTER - START */
-footer {
-    background-color: var(--bg_color);
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-
-    text-align: center;
-    color: white;
-    padding: 1.25rem 0;
-    & a {
-        color: white;
-        text-decoration: none;
-        &:hover {
-            color: var(--main_color);
-        }
-    }
-}
-.arrow-up a {
-    position: fixed;
-    bottom: 4rem;
-    right: 0.625rem;
-
-    font-size: 300%;
-    color: var(--main_color);
-}
-
-/* FOOTER - FINISH */
 
 /* MEDIA QUERIES - START */
 @media (width >= 37.5rem) {
