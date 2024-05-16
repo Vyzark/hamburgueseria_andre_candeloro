@@ -49,6 +49,10 @@ header .menu {
         text-align: center;
         border-bottom: 0.0625rem solid #aaa;
         color: #aaa;
+        &:hover {
+            color: black;
+            font-weight: 700;
+        }
     }
     & li:last-child a {
         border-bottom: 0;
