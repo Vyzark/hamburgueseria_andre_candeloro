@@ -1,0 +1,58 @@
+diff a/menu.html b/menu.html	(rejected hunks)
+@@ -82,12 +82,54 @@
+                                 <h4>Today's Hot Offers</h4>
+                                 <hr noshade="noshade">
+                                 <p>
+-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam optio repellendus mollitia, natus at explicabo illo expedita iste ad assumenda.
++                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam optio repellendus
++                                    mollitia, natus at explicabo illo expedita iste ad assumenda.
+                                 </p>
+                             </div>
+                         </div>
+                         <div class="list">
+-                            <!-- INSERT LIST OF DISHES STRUCTURE HERE -->
++                            <article>
++                                <figure>
++                                    <img src="" alt="">
++                                </figure>
++                                <div>
++                                    <h4>Chicken Burger with Cheese and Butter  <span>  $95</span></h4>
++                                    <p>
++                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, est!
++                                    </p>
++                                    <a href="#" class="link">Order Now
++                                        <i class="fas fa-long-arrow-alt-right"></i>
++                                    </a>
++                                </div>
++                            </article>
++                            <article>
++                                <figure>
++                                    <img src="" alt="">
++                                </figure>
++                                <div>
++                                    <h4>Coffee and Tea with Milk and Chocolate <span> $30</span></h4>
++                                    <p>
++                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, est!
++                                    </p>
++                                    <a href="#" class="link">Order Now
++                                        <i class="fas fa-long-arrow-alt-right"></i>
++                                    </a>
++                                </div>
++                            </article>
++                            <article>
++                                <figure>
++                                    <img src="" alt="">
++                                </figure>
++                                <div>
++                                    <h4>Deep-Fried Breaded Cod with Lemon, Caesar-Salad and Fries <span> $65</span></h4>
++                                    <p>
++                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, est!
++                                    </p>
++                                    <a href="#" class="link">Order Now
++                                        <i class="fas fa-long-arrow-alt-right"></i>
++                                    </a>
++                                </div>
++                            </article>
+                         </div>
+                     </div>
+                 </div>
